@@ -72,9 +72,20 @@ scaffold.bat
 
 This will restore packages, install the correct EF Core tool version, create migration files, and apply them to your database.
 
-#### Option B: Create the Table Manually in SSMS (if scaffold doesn't work)
+#### Option B: Use Package Manager Console in Visual Studio (if scaffold.bat doesn't work)
 
-If you run into issues with the scaffold script, you can create the table yourself. Run this SQL script in SSMS against your database:
+If you run into issues with the scaffold script, open **Visual Studio** and go to **Tools → NuGet Package Manager → Package Manager Console**, then run:
+
+```powershell
+Add-Migration InitialCreate
+Update-Database
+```
+
+> 💡 Make sure the **Default project** dropdown in the Package Manager Console is set to `BuggyStudentCRUD`.
+
+#### Option C: Create the Table Manually in SSMS (last resort)
+
+If neither option above works, you can create the table yourself. Run this SQL script in SSMS against your database:
 
 ```sql
 CREATE TABLE [Students] (
