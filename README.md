@@ -87,6 +87,15 @@ CREATE TABLE [Students] (
     [GPA]            FLOAT          NOT NULL,
     [EnrollmentDate] DATETIME2      NOT NULL
 );
+
+-- Sample data so you have students to test with
+INSERT INTO [Students] ([FirstName], [LastName], [Email], [Course], [YearLevel], [GPA], [EnrollmentDate])
+VALUES
+    ('Maria',    'Santos',    'maria.santos@university.edu',    'Computer Science',       3, 3.5, '2023-08-15'),
+    ('Juan',     'Dela Cruz', 'juan.delacruz@university.edu',   'Information Technology',  2, 3.2, '2024-01-10'),
+    ('Ana',      'Reyes',     'ana.reyes@university.edu',       'Computer Science',        4, 3.8, '2022-06-20'),
+    ('Carlos',   'Garcia',    'carlos.garcia@university.edu',   'Information Systems',     1, 2.9, '2025-08-01'),
+    ('Patricia', 'Lim',       'patricia.lim@university.edu',    'Computer Engineering',    3, 3.6, '2023-08-15');
 ```
 
 > 📌 Make sure you run this on the correct database (the one you created in Step 2).
